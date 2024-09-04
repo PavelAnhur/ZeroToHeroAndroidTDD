@@ -11,16 +11,18 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var textView: TextView
     private lateinit var rootLayout: LinearLayout
+    private lateinit var removeButton: Button
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val removeButton: Button = findViewById(R.id.removeButton)
+        removeButton = findViewById(R.id.removeButton)
         textView = findViewById(R.id.titleTextView)
         rootLayout = findViewById(R.id.rootLayout)
         removeButton.setOnClickListener {
             rootLayout.removeView(textView)
+            removeButton.isEnabled = false
         }
     }
 
@@ -36,5 +38,6 @@ class MainActivity : AppCompatActivity() {
         if (childCount != rootLayoutChildCount) {
             rootLayout.removeView(textView)
         }
+        removeButton.isEnabled = false
     }
 }
