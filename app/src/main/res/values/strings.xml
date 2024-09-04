@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ZeroToHeroAndroidTDD</string>
+    <string name="helloWorld">Hello World!</string>
+    <string name="change">change</string>
+    <string name="hide">hide</string>
+    <string name="remove">remove</string>
 </resources>
